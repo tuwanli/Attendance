@@ -32,6 +32,8 @@ static NSString *cell_identifer = @"cell_identifer";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.title = @"考勤";
     _imagePath = @"";
     // Do any additional setup after loading the view.
     _studenArr = [[NSMutableArray alloc]init];

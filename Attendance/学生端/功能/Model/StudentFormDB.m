@@ -11,7 +11,7 @@
 
 //创建代码
 
-#define STUDENT_CREATESQL @"create table if not exists `student_form`(classId ,student_id varchar(30) ,classname varchar(30) ,startTime varchar(30) ,weekDayId varchar(30) ,teacherName varchar(40) )"
+#define STUDENT_CREATESQL @"create table if not exists `student_form`(classId ,student_id varchar(30) ,classname varchar(30) ,startTime varchar(30) ,weekDayId varchar(30) primary key,teacherName varchar(40) )"
 @implementation StudentFormDB
 + (instancetype)shareStudentForm
 {

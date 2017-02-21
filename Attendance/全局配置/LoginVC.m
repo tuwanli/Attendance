@@ -162,6 +162,13 @@
         //管理员不能直接注册
 //        [self.nameField setText:@""];
 //        [self.pwdField setText:@""];
+        if ([[[NSUserDefaults standardUserDefaults]objectForKey:@"admin_id"]integerValue]>0) {
+            [self.nameField setText:@"admini"];
+            [self.pwdField setText:@"123"];
+        }else{
+            [self.nameField setText:@""];
+            [self.pwdField setText:@""];
+        }
         [UIView animateWithDuration:0.3 animations:^{
             
             self.registerBtn.alpha = 0.0;

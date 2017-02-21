@@ -9,7 +9,7 @@
 #import "RegisteredVC.h"
 #import "YFChooseBaseTabBarVCManager.h"
 #import "StudentFormDB.h"
-#import "CurriculumDB.h"
+//#import "CurriculumDB.h"
 static NSInteger studendid = 0;
 static NSInteger teacherid = 0;
 @interface RegisteredVC ()<UITextFieldDelegate,UIAlertViewDelegate>
@@ -93,7 +93,7 @@ static NSInteger teacherid = 0;
 - (IBAction)clickRegisterBtn:(id)sender {
     
     //所有课表
-    
+    /*
     NSString *fileName = [[NSBundle mainBundle]pathForResource:@"curriculum" ofType:@"plist"];
     NSMutableArray *temArr = [[NSMutableArray alloc]initWithContentsOfFile:fileName];
     
@@ -107,6 +107,7 @@ static NSInteger teacherid = 0;
         model.classname = classStr;
         [[CurriculumDB shareStudentCurriculum]student_insertCurrData:model];
     }
+    */
     
     switch (self.chooseIndex) {
         case 0:
@@ -137,19 +138,6 @@ static NSInteger teacherid = 0;
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             [defaults setObject:@(studendid) forKey:@"studen_id"];
             [defaults synchronize];
-            
-            
-            //课程表
-            NSString *filename = [[NSBundle mainBundle]pathForResource:@"StudentForm" ofType:@"plist"];
-            NSArray *formArr = [[NSArray alloc]initWithContentsOfFile:filename];
-            for (NSDictionary *tempDict in formArr) {
-                FormModel *model = [[FormModel alloc]init];
-                [model setValuesForKeysWithDictionary:tempDict];
-                model.student_id = @(studendid);
-                [[StudentFormDB shareStudentForm]student_insertFormData:model];
-            }
-            
-            
             
         
         }
@@ -186,7 +174,15 @@ static NSInteger teacherid = 0;
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"添加成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alert show];
     }
-    
+    //课程表
+    NSString *filename = [[NSBundle mainBundle]pathForResource:@"StudentForm" ofType:@"plist"];
+    NSArray *formArr = [[NSArray alloc]initWithContentsOfFile:filename];
+    for (NSDictionary *tempDict in formArr) {
+        FormModel *model = [[FormModel alloc]init];
+        [model setValuesForKeysWithDictionary:tempDict];
+        model.student_id = @(studendid);
+        [[StudentFormDB shareStudentForm]student_insertFormData:model];
+    }
 
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

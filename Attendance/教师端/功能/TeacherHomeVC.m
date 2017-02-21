@@ -7,7 +7,8 @@
 //
 
 #import "TeacherHomeVC.h"
-#import "StudentChooseClassVC.h"
+//#import "StudentChooseClassVC.h"
+#import "StudentsClassFormVC.h"
 #import "TeaDealLeaveVC.h"
 
 @interface TeacherHomeVC ()
@@ -38,19 +39,29 @@
     switch (fundId) {
         case 1://考勤
         {
+            StudentsClassFormVC *choosevc = [[StudentsClassFormVC alloc]init];
+            choosevc.chooseIndex = 12;
+            choosevc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:choosevc animated:YES];
+            /*
             StudentChooseClassVC *choosevc = [[StudentChooseClassVC alloc]init];
             choosevc.hidesBottomBarWhenPushed = YES;
             choosevc.chooseIndex = 12;
-            [self.navigationController pushViewController:choosevc animated:YES];
+            [self.navigationController pushViewController:choosevc animated:YES];*/
             
         }
             break;
         case 2:
         {
+            StudentsClassFormVC *choosevc = [[StudentsClassFormVC alloc]init];
+            choosevc.chooseIndex = 13;
+            choosevc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:choosevc animated:YES];
+            /*
             StudentChooseClassVC *choosevc = [[StudentChooseClassVC alloc]init];
             choosevc.hidesBottomBarWhenPushed = YES;
             choosevc.chooseIndex = 13;
-            [self.navigationController pushViewController:choosevc animated:YES];
+            [self.navigationController pushViewController:choosevc animated:YES];*/
             
         }
             break;

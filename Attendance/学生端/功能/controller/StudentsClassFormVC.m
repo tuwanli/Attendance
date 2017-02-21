@@ -10,6 +10,11 @@
 #import "StudentFormDB.h"
 #import "StudentFormCell.h"
 #import "StudentClassWorkVC.h"
+
+#import "StudentSignVC.h"
+#import "StudentLeaveTabVC.h"
+#import "StudentCheckSignVC.h"
+#import "TeaReserWorkVC.h"
 static NSString *StudentFormCell_identifer = @"StudentFormCell";
 @interface StudentsClassFormVC ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong)UICollectionView *collectionView;
@@ -20,7 +25,8 @@ static NSString *StudentFormCell_identifer = @"StudentFormCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的课程表";
+    self.title = @"课程表";
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     // Do any additional setup after loading the view.
     _dataArr = [[NSMutableArray alloc]init];
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
@@ -88,10 +94,67 @@ static NSString *StudentFormCell_identifer = @"StudentFormCell";
 {
     NSDictionary *tempDict = _dataArr[indexPath.section];
     FormModel *model = tempDict[@"class"][indexPath.item];
-    StudentClassWorkVC *workvc =[[StudentClassWorkVC alloc]init];
-    workvc.classname = model.classname;
-    workvc.classId = [model.classId integerValue];
-    [self.navigationController pushViewController:workvc animated:YES];
+    
+    switch (_chooseIndex) {
+        case 10:
+        {
+            StudentSignVC *signVc = [[StudentSignVC alloc]init];
+            signVc.classname = model.classname;
+            signVc.classId = 10*indexPath.section+indexPath.item;
+            [self.navigationController pushViewController:signVc animated:YES];
+        }
+            break;
+        case 11:
+        {
+            UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            StudentLeaveTabVC *leavevc = [story instantiateViewControllerWithIdentifier:@"leave"];
+            leavevc.classname = model.classname;
+            leavevc.classId = 10*indexPath.section+indexPath.item;
+            [self.navigationController pushViewController:leavevc animated:YES];
+        }
+            break;
+        case 12://教师端
+        {
+            StudentCheckSignVC *checkvc = [[StudentCheckSignVC alloc]init];
+            checkvc.hidesBottomBarWhenPushed = YES;
+            checkvc.isteacher = YES;
+            checkvc.classname = model.classname;
+            checkvc.classId = 10*indexPath.section+indexPath.item;
+            [self.navigationController pushViewController:checkvc animated:YES];
+        }
+            break;
+        case 13://教师端
+        {
+            TeaReserWorkVC *workvc = [[TeaReserWorkVC alloc]init];
+            workvc.hidesBottomBarWhenPushed = YES;
+            workvc.isteacher = YES;
+            workvc.classname = model.classname;
+            workvc.classId = 10*indexPath.section+indexPath.item;
+            [self.navigationController pushViewController:workvc animated:YES];
+        }
+            break;
+        case 14://管理员
+        {
+            StudentClassWorkVC *workvc =[[StudentClassWorkVC alloc]init];
+            workvc.classname = model.classname;
+            workvc.classId = 10*indexPath.section+indexPath.item;
+            workvc.isManager = YES;
+            [self.navigationController pushViewController:workvc animated:YES];
+        }
+            break;
+        default:
+        {
+            NSDictionary *tempDict = _dataArr[indexPath.section];
+            FormModel *model = tempDict[@"class"][indexPath.item];
+            StudentClassWorkVC *workvc =[[StudentClassWorkVC alloc]init];
+            workvc.classname = model.classname;
+            workvc.classId = [model.classId integerValue];
+            [self.navigationController pushViewController:workvc animated:YES];
+        }
+            break;
+    }
+    
+    
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {

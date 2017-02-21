@@ -42,6 +42,10 @@
 		2013C7441E598EC7005787D3 /* StudentClassWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2013C7431E598EC7005787D3 /* StudentClassWorkVC.m */; };
 		2013C7481E598F6C005787D3 /* StudentWorkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2013C7461E598F6C005787D3 /* StudentWorkCell.m */; };
 		2013C7491E598F6C005787D3 /* StudentWorkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2013C7471E598F6C005787D3 /* StudentWorkCell.xib */; };
+		201D30D21E5BD421005DADE2 /* geren_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 201D30D01E5BD421005DADE2 /* geren_down@2x.png */; };
+		201D30D31E5BD421005DADE2 /* geren_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 201D30D11E5BD421005DADE2 /* geren_normal@2x.png */; };
+		201D30D91E5BD533005DADE2 /* home_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 201D30D81E5BD533005DADE2 /* home_normal@2x.png */; };
+		201D30DB1E5BD588005DADE2 /* home_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 201D30DA1E5BD588005DADE2 /* home_down@2x.png */; };
 		2023B7D01E52AF9A009B09BB /* StudentFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2023B7CF1E52AF9A009B09BB /* StudentFMDBManager.m */; };
 		2023B7D31E52AFA4009B09BB /* TeacherFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2023B7D21E52AFA4009B09BB /* TeacherFMDBManager.m */; };
 		2023B7D61E52AFB4009B09BB /* BaseFMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2023B7D51E52AFB4009B09BB /* BaseFMDB.m */; };
@@ -160,6 +164,10 @@
 		2013C7451E598F6C005787D3 /* StudentWorkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentWorkCell.h; sourceTree = "<group>"; };
 		2013C7461E598F6C005787D3 /* StudentWorkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentWorkCell.m; sourceTree = "<group>"; };
 		2013C7471E598F6C005787D3 /* StudentWorkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentWorkCell.xib; sourceTree = "<group>"; };
+		201D30D01E5BD421005DADE2 /* geren_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "geren_down@2x.png"; sourceTree = "<group>"; };
+		201D30D11E5BD421005DADE2 /* geren_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "geren_normal@2x.png"; sourceTree = "<group>"; };
+		201D30D81E5BD533005DADE2 /* home_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_normal@2x.png"; sourceTree = "<group>"; };
+		201D30DA1E5BD588005DADE2 /* home_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_down@2x.png"; sourceTree = "<group>"; };
 		2023B7CE1E52AF9A009B09BB /* StudentFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentFMDBManager.h; sourceTree = "<group>"; };
 		2023B7CF1E52AF9A009B09BB /* StudentFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentFMDBManager.m; sourceTree = "<group>"; };
 		2023B7D11E52AFA4009B09BB /* TeacherFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherFMDBManager.h; sourceTree = "<group>"; };
@@ -467,6 +475,10 @@
 				2013C73C1E598169005787D3 /* add.png */,
 				20054E2A1E56E353004D805E /* chioce@2x.png */,
 				20054E2B1E56E353004D805E /* chioceactive@2x.png */,
+				201D30D01E5BD421005DADE2 /* geren_down@2x.png */,
+				201D30D11E5BD421005DADE2 /* geren_normal@2x.png */,
+				201D30D81E5BD533005DADE2 /* home_normal@2x.png */,
+				201D30DA1E5BD588005DADE2 /* home_down@2x.png */,
 				20054E1D1E56CD34004D805E /* ButtonMove.png */,
 				20054E1B1E56CD1F004D805E /* 下拉框.png */,
 				20394E391E53FC620038E555 /* ykt_man_big@3x.png */,
@@ -728,6 +740,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201D30DB1E5BD588005DADE2 /* home_down@2x.png in Resources */,
 				2013C73D1E598169005787D3 /* add.png in Resources */,
 				05FAD5221E4BF7210047DBA1 /* LaunchScreen.storyboard in Resources */,
 				2013C7491E598F6C005787D3 /* StudentWorkCell.xib in Resources */,
@@ -739,9 +752,12 @@
 				2023B7F51E52E0D2009B09BB /* 体检报告_icon@3x.png in Resources */,
 				2023B7F71E52E0D6009B09BB /* 我的预约单_icon@3x.png in Resources */,
 				2023B7FB1E52E0E9009B09BB /* 预约挂号_icon@3x.png in Resources */,
+				201D30D91E5BD533005DADE2 /* home_normal@2x.png in Resources */,
 				2023B7F31E52E0C8009B09BB /* 就诊费用_icon@3x.png in Resources */,
 				2084F4071E5A9D3A00FE19A9 /* ManagerAccountCell.xib in Resources */,
+				201D30D31E5BD421005DADE2 /* geren_normal@2x.png in Resources */,
 				20394E3A1E53FC620038E555 /* ykt_man_big@3x.png in Resources */,
+				201D30D21E5BD421005DADE2 /* geren_down@2x.png in Resources */,
 				05FAD56E1E4C04010047DBA1 /* BaseCollectionCell.xib in Resources */,
 				20394E491E5437810038E555 /* StudentCheckCell.xib in Resources */,
 				20054E2C1E56E353004D805E /* chioce@2x.png in Resources */,

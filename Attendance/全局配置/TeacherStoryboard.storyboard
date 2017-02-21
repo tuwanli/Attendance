@@ -50,7 +50,7 @@
         <scene sceneID="juj-2J-0Ui">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bQx-Ss-I4q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="Lxb-bl-f7h"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="home_normal.png" selectedImage="home_down.png" id="Lxb-bl-f7h"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4ph-ld-JOf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -285,7 +285,7 @@
         <scene sceneID="mCF-t8-e1T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lyS-aT-6Yb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="个人" id="B1I-uY-opP"/>
+                    <tabBarItem key="tabBarItem" title="个人" image="geren_normal.png" selectedImage="home_down.png" id="B1I-uY-opP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wuc-QA-KFT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -302,6 +302,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="geren_normal.png" width="30" height="28"/>
+        <image name="home_down.png" width="30" height="28"/>
+        <image name="home_normal.png" width="30" height="28"/>
         <image name="testIcon" width="200" height="200"/>
     </resources>
 </document>

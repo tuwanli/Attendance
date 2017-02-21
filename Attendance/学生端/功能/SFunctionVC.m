@@ -7,7 +7,7 @@
 //
 
 #import "SFunctionVC.h"
-#import "StudentChooseClassVC.h"
+//#import "StudentChooseClassVC.h"
 #import "StudentCheckSignVC.h"
 #import "StudentFormDB.h"
 #import "StudentsClassFormVC.h"
@@ -41,10 +41,15 @@
     switch (fundId) {
         case 1://考勤
         {
+            StudentsClassFormVC *choosevc = [[StudentsClassFormVC alloc]init];
+            choosevc.chooseIndex = 10;
+            choosevc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:choosevc animated:YES];
+            /*
             StudentChooseClassVC *choosevc = [[StudentChooseClassVC alloc]init];
             choosevc.hidesBottomBarWhenPushed = YES;
             choosevc.chooseIndex = 10;
-            [self.navigationController pushViewController:choosevc animated:YES];
+            [self.navigationController pushViewController:choosevc animated:YES];*/
             
         }
             break;
@@ -66,10 +71,15 @@
             break;
         case 4:
         {
-            StudentChooseClassVC *choosevc = [[StudentChooseClassVC alloc]init];
+            StudentsClassFormVC *choosevc = [[StudentsClassFormVC alloc]init];
             choosevc.chooseIndex = 11;
             choosevc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:choosevc animated:YES];
+            /*
+            StudentChooseClassVC *choosevc = [[StudentChooseClassVC alloc]init];
+            choosevc.chooseIndex = 11;
+            choosevc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:choosevc animated:YES];*/
         }
             break;
         default:

@@ -50,7 +50,7 @@
         <scene sceneID="BzN-uk-Ayl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWS-fr-95r" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="CFe-cZ-CUD"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="home_normal.png" selectedImage="home_down.png" id="CFe-cZ-CUD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZLl-Yq-dBU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -128,15 +128,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="250" id="g8p-Nx-wmH">
-                                        <rect key="frame" x="0.0" y="144" width="375" height="250"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="400" id="g8p-Nx-wmH">
+                                        <rect key="frame" x="0.0" y="144" width="375" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g8p-Nx-wmH" id="esk-nx-aKf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="399"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqL-Ho-qIb">
-                                                    <rect key="frame" x="29" y="60" width="326" height="48"/>
+                                                    <rect key="frame" x="29" y="100" width="326" height="48"/>
                                                     <color key="backgroundColor" red="0.0" green="0.65864288810000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="BYi-Ja-C3X"/>
@@ -153,7 +153,7 @@
                                             <constraints>
                                                 <constraint firstItem="WqL-Ho-qIb" firstAttribute="leading" secondItem="esk-nx-aKf" secondAttribute="leading" constant="29" id="5Tj-vh-I3f"/>
                                                 <constraint firstAttribute="trailing" secondItem="WqL-Ho-qIb" secondAttribute="trailing" constant="20" id="YyM-ol-GYh"/>
-                                                <constraint firstItem="WqL-Ho-qIb" firstAttribute="top" secondItem="esk-nx-aKf" secondAttribute="top" constant="60" id="jTz-PT-L1B"/>
+                                                <constraint firstItem="WqL-Ho-qIb" firstAttribute="top" secondItem="esk-nx-aKf" secondAttribute="top" constant="100" id="jTz-PT-L1B"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -180,7 +180,7 @@
         <scene sceneID="V9s-Z7-7Rn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Adz-4k-STF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="个人" id="JfQ-rJ-UK0"/>
+                    <tabBarItem key="tabBarItem" title="个人" image="geren_normal.png" selectedImage="geren_down.png" id="JfQ-rJ-UK0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FQy-Ng-5cc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -197,6 +197,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="geren_down.png" width="30" height="28"/>
+        <image name="geren_normal.png" width="30" height="28"/>
+        <image name="home_down.png" width="30" height="28"/>
+        <image name="home_normal.png" width="30" height="28"/>
         <image name="testIcon" width="200" height="200"/>
     </resources>
 </document>

@@ -8,7 +8,8 @@
 
 #import "ManagerVC.h"
 #import "StudentCheckSignVC.h"
-#import "StudentChooseClassVC.h"
+//#import "StudentChooseClassVC.h"
+#import "StudentsClassFormVC.h"
 #import "TeaDealLeaveVC.h"
 #import "ManagerStuAccountVC.h"
 @interface ManagerVC ()
@@ -45,10 +46,15 @@
             break;
         case 2://查询考勤
         {
-            StudentChooseClassVC *choosevc = [[StudentChooseClassVC alloc]init];
+            StudentsClassFormVC *choosevc = [[StudentsClassFormVC alloc]init];
             choosevc.chooseIndex = 12;
             choosevc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:choosevc animated:YES];
+            /*
+            StudentChooseClassVC *choosevc = [[StudentChooseClassVC alloc]init];
+            choosevc.chooseIndex = 12;
+            choosevc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:choosevc animated:YES];*/
             
         }
             break;
@@ -62,10 +68,16 @@
             break;
         case 4://作业管理
         {
+            /*
             StudentChooseClassVC *choosevc = [[StudentChooseClassVC alloc]init];
             choosevc.chooseIndex = 14;
             choosevc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:choosevc animated:YES];*/
+            StudentsClassFormVC *choosevc = [[StudentsClassFormVC alloc]init];
+            choosevc.chooseIndex = 14;
+            choosevc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:choosevc animated:YES];
+            
         }
             break;
         default:
