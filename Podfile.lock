@@ -1,0 +1,17 @@
+PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - MBProgressHUD (1.0.0)
+
+DEPENDENCIES:
+  - FMDB (~> 2.5)
+  - MBProgressHUD (~> 1.0)
+
+SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+
+PODFILE CHECKSUM: c8cd73a358f81cd00b6d336d19d6fc21d59f7ba6
+
+COCOAPODS: 1.1.1

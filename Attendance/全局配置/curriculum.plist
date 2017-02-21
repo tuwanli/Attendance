@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>CurriculumId</key>
+		<string>111</string>
+		<key>name</key>
+		<string>计算接科学与技术</string>
+		<key>class</key>
+		<array>
+			<string>高等数学</string>
+			<string>程序设计</string>
+			<string>大学物理</string>
+			<string>数据库课程设计</string>
+			<string>数据库原理</string>
+			<string>操作系统原理</string>
+			<string>计算机组成原理</string>
+			<string>数据结构</string>
+			<string>接口与通讯技术</string>
+			<string>汇编语言</string>
+		</array>
+	</dict>
+	<dict>
+        <key>CurriculumId</key>
+        <string>112</string>
+		<key>name</key>
+		<string>数字媒体技术</string>
+		<key>class</key>
+		<array>
+			<string>数字媒体技术导论</string>
+			<string>程序设计</string>
+			<string>游戏设计与制作课程设计</string>
+			<string>数据库原理与应用</string>
+			<string>游戏角色设计</string>
+			<string>三维动画课程设计</string>
+			<string>数字图像课程设计</string>
+			<string>数字媒体后期制作</string>
+			<string>影视艺术欣赏</string>
+			<string>色彩课程设计</string>
+			<string>移动游戏开发</string>
+			<string>网站的设计与制作</string>
+		</array>
+	</dict>
+	<dict>
+        <key>CurriculumId</key>
+        <string>113</string>
+		<key>name</key>
+		<string>网络工程</string>
+		<key>class</key>
+		<array>
+			<string>Java程序设计</string>
+			<string>程序设计</string>
+			<string>网页制作技术</string>
+			<string>VB程序设计</string>
+			<string>综合布线技术</string>
+			<string>网络的组建与设计</string>
+			<string>计算机安全技术</string>
+			<string>单片机原理</string>
+			<string>操作系统原理</string>
+			<string>电子电路基础</string>
+		</array>
+	</dict>
+</array>
+</plist>
