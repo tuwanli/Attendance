@@ -174,6 +174,8 @@ static NSInteger teacherid = 0;
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"添加成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alert show];
     }
+    
+    [[StudentFormDB shareStudentForm]student_deleteFormData:nil];
     //课程表
     NSString *filename = [[NSBundle mainBundle]pathForResource:@"StudentForm" ofType:@"plist"];
     NSArray *formArr = [[NSArray alloc]initWithContentsOfFile:filename];

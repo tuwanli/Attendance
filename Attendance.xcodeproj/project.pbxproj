@@ -46,6 +46,7 @@
 		201D30D31E5BD421005DADE2 /* geren_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 201D30D11E5BD421005DADE2 /* geren_normal@2x.png */; };
 		201D30D91E5BD533005DADE2 /* home_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 201D30D81E5BD533005DADE2 /* home_normal@2x.png */; };
 		201D30DB1E5BD588005DADE2 /* home_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 201D30DA1E5BD588005DADE2 /* home_down@2x.png */; };
+		201D30DD1E5BD834005DADE2 /* StudentForm.plist in Resources */ = {isa = PBXBuildFile; fileRef = 201D30DC1E5BD834005DADE2 /* StudentForm.plist */; };
 		2023B7D01E52AF9A009B09BB /* StudentFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2023B7CF1E52AF9A009B09BB /* StudentFMDBManager.m */; };
 		2023B7D31E52AFA4009B09BB /* TeacherFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2023B7D21E52AFA4009B09BB /* TeacherFMDBManager.m */; };
 		2023B7D61E52AFB4009B09BB /* BaseFMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2023B7D51E52AFB4009B09BB /* BaseFMDB.m */; };
@@ -72,12 +73,10 @@
 		20394E441E54310F0038E555 /* StudentCheckSignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 20394E431E54310F0038E555 /* StudentCheckSignVC.m */; };
 		20394E481E5437810038E555 /* StudentCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20394E461E5437810038E555 /* StudentCheckCell.m */; };
 		20394E491E5437810038E555 /* StudentCheckCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20394E471E5437810038E555 /* StudentCheckCell.xib */; };
-		20394E4B1E5446350038E555 /* curriculum.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20394E4A1E5446350038E555 /* curriculum.plist */; };
 		20394E4E1E544C3A0038E555 /* StudentsClassFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 20394E4D1E544C3A0038E555 /* StudentsClassFormVC.m */; };
 		20394E5C1E5454BE0038E555 /* StudentLeaveTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 20394E5A1E5454BE0038E555 /* StudentLeaveTabVC.m */; };
 		2042A1881E553FDA009A2EE3 /* StudentLeaveDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2042A1871E553FDA009A2EE3 /* StudentLeaveDB.m */; };
 		2042A18B1E555662009A2EE3 /* StudentFormDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2042A18A1E555662009A2EE3 /* StudentFormDB.m */; };
-		2042A18D1E557F68009A2EE3 /* StudentForm.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2042A18C1E557F68009A2EE3 /* StudentForm.plist */; };
 		2042A1911E558719009A2EE3 /* StudentFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2042A18F1E558719009A2EE3 /* StudentFormCell.m */; };
 		2042A1921E558719009A2EE3 /* StudentFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2042A1901E558719009A2EE3 /* StudentFormCell.xib */; };
 		2042A1951E5592F5009A2EE3 /* CurriculumDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2042A1941E5592F5009A2EE3 /* CurriculumDB.m */; };
@@ -168,6 +167,7 @@
 		201D30D11E5BD421005DADE2 /* geren_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "geren_normal@2x.png"; sourceTree = "<group>"; };
 		201D30D81E5BD533005DADE2 /* home_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_normal@2x.png"; sourceTree = "<group>"; };
 		201D30DA1E5BD588005DADE2 /* home_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_down@2x.png"; sourceTree = "<group>"; };
+		201D30DC1E5BD834005DADE2 /* StudentForm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StudentForm.plist; sourceTree = "<group>"; };
 		2023B7CE1E52AF9A009B09BB /* StudentFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentFMDBManager.h; sourceTree = "<group>"; };
 		2023B7CF1E52AF9A009B09BB /* StudentFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentFMDBManager.m; sourceTree = "<group>"; };
 		2023B7D11E52AFA4009B09BB /* TeacherFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherFMDBManager.h; sourceTree = "<group>"; };
@@ -210,7 +210,6 @@
 		20394E451E5437810038E555 /* StudentCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentCheckCell.h; sourceTree = "<group>"; };
 		20394E461E5437810038E555 /* StudentCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentCheckCell.m; sourceTree = "<group>"; };
 		20394E471E5437810038E555 /* StudentCheckCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentCheckCell.xib; sourceTree = "<group>"; };
-		20394E4A1E5446350038E555 /* curriculum.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = curriculum.plist; sourceTree = "<group>"; };
 		20394E4C1E544C3A0038E555 /* StudentsClassFormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentsClassFormVC.h; sourceTree = "<group>"; };
 		20394E4D1E544C3A0038E555 /* StudentsClassFormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentsClassFormVC.m; sourceTree = "<group>"; };
 		20394E591E5454BE0038E555 /* StudentLeaveTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentLeaveTabVC.h; sourceTree = "<group>"; };
@@ -219,7 +218,6 @@
 		2042A1871E553FDA009A2EE3 /* StudentLeaveDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentLeaveDB.m; sourceTree = "<group>"; };
 		2042A1891E555662009A2EE3 /* StudentFormDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentFormDB.h; sourceTree = "<group>"; };
 		2042A18A1E555662009A2EE3 /* StudentFormDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentFormDB.m; sourceTree = "<group>"; };
-		2042A18C1E557F68009A2EE3 /* StudentForm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StudentForm.plist; sourceTree = "<group>"; };
 		2042A18E1E558719009A2EE3 /* StudentFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentFormCell.h; sourceTree = "<group>"; };
 		2042A18F1E558719009A2EE3 /* StudentFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentFormCell.m; sourceTree = "<group>"; };
 		2042A1901E558719009A2EE3 /* StudentFormCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentFormCell.xib; sourceTree = "<group>"; };
@@ -380,8 +378,7 @@
 				05FAD54C1E4BF8370047DBA1 /* TeacherStoryboard.storyboard */,
 				05FAD54E1E4BF8410047DBA1 /* ManagerStoryboard.storyboard */,
 				2023B7E01E52B24D009B09BB /* Common.pch */,
-				20394E4A1E5446350038E555 /* curriculum.plist */,
-				2042A18C1E557F68009A2EE3 /* StudentForm.plist */,
+				201D30DC1E5BD834005DADE2 /* StudentForm.plist */,
 			);
 			path = "全局配置";
 			sourceTree = "<group>";
@@ -749,6 +746,7 @@
 				2023B7F91E52E0E2009B09BB /* 寻医_icon@3x.png in Resources */,
 				2023B7F11E52E0C1009B09BB /* 健康知识_icon@2x.png in Resources */,
 				05FAD51F1E4BF7210047DBA1 /* Assets.xcassets in Resources */,
+				201D30DD1E5BD834005DADE2 /* StudentForm.plist in Resources */,
 				2023B7F51E52E0D2009B09BB /* 体检报告_icon@3x.png in Resources */,
 				2023B7F71E52E0D6009B09BB /* 我的预约单_icon@3x.png in Resources */,
 				2023B7FB1E52E0E9009B09BB /* 预约挂号_icon@3x.png in Resources */,
@@ -762,7 +760,6 @@
 				20394E491E5437810038E555 /* StudentCheckCell.xib in Resources */,
 				20054E2C1E56E353004D805E /* chioce@2x.png in Resources */,
 				2023B7EF1E52E0BB009B09BB /* 健康工具_icon@3x.png in Resources */,
-				2042A18D1E557F68009A2EE3 /* StudentForm.plist in Resources */,
 				20394E351E53EC580038E555 /* StudentSignCell.xib in Resources */,
 				20054E1C1E56CD1F004D805E /* 下拉框.png in Resources */,
 				20054E2D1E56E353004D805E /* chioceactive@2x.png in Resources */,
@@ -771,7 +768,6 @@
 				2042A1921E558719009A2EE3 /* StudentFormCell.xib in Resources */,
 				05FAD51D1E4BF7210047DBA1 /* Main.storyboard in Resources */,
 				20054E1E1E56CD34004D805E /* ButtonMove.png in Resources */,
-				20394E4B1E5446350038E555 /* curriculum.plist in Resources */,
 				05FAD54B1E4BF82A0047DBA1 /* StudentStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

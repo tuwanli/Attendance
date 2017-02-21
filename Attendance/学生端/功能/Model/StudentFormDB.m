@@ -11,7 +11,7 @@
 
 //创建代码
 
-#define STUDENT_CREATESQL @"create table if not exists `student_form`(classId ,student_id varchar(30) ,classname varchar(30) ,startTime varchar(30) ,weekDayId varchar(30) primary key,teacherName varchar(40) )"
+#define STUDENT_CREATESQL @"create table if not exists `student_form`(classId ,student_id varchar(30) ,classname varchar(30) ,startTime varchar(30) ,weekDayId varchar(30),teacherName varchar(40) )"
 @implementation StudentFormDB
 + (instancetype)shareStudentForm
 {
@@ -43,7 +43,7 @@
 - (BOOL)student_deleteFormData:(FormModel *)model
 {
     
-    NSString *sql = [NSString stringWithFormat:@"delete from `student_form` where classId='%d'",[model.classId intValue]];
+    NSString *sql = [NSString stringWithFormat:@"delete from `student_form`"];
     return [self base_deleteData:STUDENTFILENAME withCreateSql:STUDENT_CREATESQL withDeleteSql:sql];
 }
 
