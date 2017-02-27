@@ -34,7 +34,7 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+//退出登录
 - (IBAction)quitAction {
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"loginState"];
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

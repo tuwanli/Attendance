@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface StudentLeaveTabVC : UITableViewController
-@property (nonatomic, copy) NSString *classname;
-@property (nonatomic, assign)NSInteger classId;
+@property (nonatomic, copy) NSString *classname;//课程名
+@property (nonatomic, assign)NSInteger classId;//课程id
 @end

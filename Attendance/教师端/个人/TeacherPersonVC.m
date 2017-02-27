@@ -30,6 +30,7 @@
     [super viewDidLoad];
     
     TeacherModel *model = [[TeacherModel alloc]init];
+    //教师id
     userid = [[[NSUserDefaults standardUserDefaults]objectForKey:@"teacher_id"]integerValue];
     [[TeacherFMDBManager shareTeacher]teacher_getData:model teacherId:userid];
     _headImageView.userInteractionEnabled = YES;
@@ -58,7 +59,7 @@
     pickerController.delegate = self;
     pickerController.allowsEditing = YES;
 }
-
+//改变头像
 - (void)changeStuHeadImage
 {
     
@@ -72,7 +73,7 @@
 }
 
 
-
+#pragma mark--UIActionSheetDelegate
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {//相机
@@ -92,7 +93,7 @@
             [alert show];
         }
     }
-    else if (buttonIndex == 2){
+    else if (buttonIndex == 2){//图库
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])
         {
             [self pictureLibrary];
@@ -270,7 +271,7 @@
     }
     return thumbnail;
 }
-//沙盒路径取出照片(保存)
+//沙盒路径取出照片
 - (UIImage *)takepicture:(NSString *)string
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);

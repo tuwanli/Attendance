@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.accountL setText:@"admini"];
-    
+    //头像
     _headImageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeStuHeadImage)];
     [_headImageView addGestureRecognizer:tap];
@@ -46,7 +46,7 @@
     pickerController.delegate = self;
     pickerController.allowsEditing = YES;
 }
-
+#pragma mark--修改头像
 - (void)changeStuHeadImage
 {
     
@@ -60,7 +60,7 @@
 }
 
 
-
+#pragma mark--UIActionSheetDelegate
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {//相机
@@ -258,7 +258,7 @@
     }
     return thumbnail;
 }
-//沙盒路径取出照片(保存)
+//沙盒路径取出照片
 - (UIImage *)takepicture:(NSString *)string
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);

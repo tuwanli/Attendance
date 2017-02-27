@@ -70,7 +70,7 @@
     NSString *sql = [NSString stringWithFormat:@"delete from `teacher_work` where nowdateStr='%@'",model.nowdateStr];
     return [self base_deleteData:STUDENTFILENAME withCreateSql:STUDENT_CREATESQL withDeleteSql:sql];
 }
-//更新学生数据
+//更新数据
 - (BOOL)student_updateworkData:(teaWorkModel *)model
 {
 

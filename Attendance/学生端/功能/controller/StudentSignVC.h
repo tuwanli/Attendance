@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 @class SignModel;
 @interface StudentSignVC : UIViewController
-@property (nonatomic, copy) NSString *classname;
-@property (nonatomic, assign)NSInteger classId;
-@property (nonatomic, assign)BOOL isteacher;
-@property (nonatomic, strong)SignModel *teaSignModel;
-@property (nonatomic, strong)StudentModel *stumodel;
-@property (nonatomic, assign)BOOL ismodify;
+@property (nonatomic, copy) NSString *classname;//课程名
+@property (nonatomic, assign)NSInteger classId;//课程 ID
+@property (nonatomic, assign)BOOL isteacher;//是否教师
+@property (nonatomic, strong)SignModel *teaSignModel;//
+@property (nonatomic, strong)StudentModel *stumodel;//
+@property (nonatomic, assign)BOOL ismodify;//是否修改状态
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StudentCheckSignVC : UIViewController
-@property (nonatomic, assign)BOOL isteacher;
-@property (nonatomic, assign)NSInteger classId;
-@property (nonatomic, copy)NSString *classname;
+@property (nonatomic, assign)BOOL isteacher;//是否为教师
+@property (nonatomic, assign)NSInteger classId;//课程 ID
+@property (nonatomic, copy)NSString *classname;//课程名
 @end

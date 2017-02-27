@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface StudentsClassFormVC : UIViewController
-@property (nonatomic, assign)NSInteger chooseIndex;
+@property (nonatomic, assign)NSInteger chooseIndex;//选择index
 @end

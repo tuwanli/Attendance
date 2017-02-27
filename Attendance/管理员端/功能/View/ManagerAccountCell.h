@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ManagerAccountCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *nameL;
-@property (weak, nonatomic) IBOutlet UILabel *classL;
-@property (weak, nonatomic) IBOutlet UILabel *yuanxiL;
-@property (weak, nonatomic) IBOutlet UILabel *phoneL;
+@property (weak, nonatomic) IBOutlet UILabel *nameL;//姓名
+@property (weak, nonatomic) IBOutlet UILabel *classL;//班级
+@property (weak, nonatomic) IBOutlet UILabel *yuanxiL;//院系
+@property (weak, nonatomic) IBOutlet UILabel *phoneL;//电话
 
 @end

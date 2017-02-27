@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface StudentFormCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *classL;
-@property (weak, nonatomic) IBOutlet UILabel *timeL;
-@property (weak, nonatomic) IBOutlet UILabel *teacherL;
+@property (weak, nonatomic) IBOutlet UILabel *classL;//课程名
+@property (weak, nonatomic) IBOutlet UILabel *timeL;//时间
+@property (weak, nonatomic) IBOutlet UILabel *teacherL;//教师
 
 @end

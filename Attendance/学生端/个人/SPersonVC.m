@@ -15,13 +15,13 @@
     NSInteger userid;
 }
 - (IBAction)quitAction;
-@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
-@property (weak, nonatomic) IBOutlet UILabel *nameL;
-@property (weak, nonatomic) IBOutlet UILabel *yuanxuL;
-@property (weak, nonatomic) IBOutlet UILabel *classL;
-@property (weak, nonatomic) IBOutlet UILabel *phoneL;
-@property (weak, nonatomic) IBOutlet UILabel *studySoreL;
-@property (weak, nonatomic) IBOutlet UIButton *quitBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;//头像
+@property (weak, nonatomic) IBOutlet UILabel *nameL;//姓名
+@property (weak, nonatomic) IBOutlet UILabel *yuanxuL;//院系
+@property (weak, nonatomic) IBOutlet UILabel *classL;//班级
+@property (weak, nonatomic) IBOutlet UILabel *phoneL;//手机号
+@property (weak, nonatomic) IBOutlet UILabel *studySoreL;//分数
+@property (weak, nonatomic) IBOutlet UIButton *quitBtn;//退出登录
 
 @end
 
@@ -30,7 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     StudentModel *model = [[StudentModel alloc]init];
+    //学生id
     userid = [[[NSUserDefaults standardUserDefaults]objectForKey:@"studen_id"]integerValue];
+    //从本地获取数据
     [[StudentFMDBManager shareStudent]student_getData:model studentId:userid];
     _headImageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeStuHeadImage)];
@@ -59,6 +61,7 @@
     pickerController.delegate = self;
     pickerController.allowsEditing = YES;
 }
+//修改头像
 - (void)changeStuHeadImage
 {
 
@@ -72,7 +75,7 @@
 }
 
 
-
+#pragma mark--UIActionDelegate
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {//相机
@@ -92,7 +95,7 @@
             [alert show];
         }
     }
-    else if (buttonIndex == 2){
+    else if (buttonIndex == 2){//图库
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])
         {
             [self pictureLibrary];
@@ -278,6 +281,7 @@
     UIImage *img = [UIImage imageWithContentsOfFile:filePath];
     return img;
 }
+//退出登录
 - (IBAction)quitAction {
 
     //从故事版获取控制器

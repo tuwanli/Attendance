@@ -12,8 +12,8 @@
 {
 
     UIImagePickerController *pickerController;
-    NSString *nowdateStr;
-    NSString *imagePath;
+    NSString *nowdateStr;//保存时间
+    NSString *imagePath;//图片路径
 }
 @property(nonatomic, strong)UITextView *textView;
 @property(nonatomic, strong)UIButton *addBtn;
@@ -36,6 +36,7 @@
     }
     
     _model = [[teaWorkModel alloc]init];
+    //课程名
     _classNameL = [[UILabel alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 30)];
     [_classNameL setFont:[UIFont systemFontOfSize:15]];
     [_classNameL setTextColor:[UIColor darkGrayColor]];
@@ -43,7 +44,7 @@
     [_classNameL setBackgroundColor:[UIColor colorWithRed:227/255.0 green:227/255.0 blue:227/255.0 alpha:1.0]];
     [_classNameL setTextAlignment:NSTextAlignmentCenter];
     [self.view addSubview:_classNameL];
-    
+    //作业
     _textView = [[UITextView alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(_classNameL.frame)+10, [UIScreen mainScreen].bounds.size.width-20, 200)];
     _textView.delegate = self;
     _textView.layer.borderColor = [UIColor colorWithRed:0 green:168/255.0 blue:1.0 alpha:1.0].CGColor;
@@ -60,12 +61,13 @@
             _textView.editable = NO;
         }
     }
+    //题目
     _tipL = [[UILabel alloc]initWithFrame:CGRectMake(12, 5, 200, 25)];
     [_tipL setText:[NSString stringWithFormat:@"请输入%@题",_classNameL.text]];
     [_tipL setFont:[UIFont systemFontOfSize:13]];
     [_tipL setTextColor:[UIColor lightGrayColor]];
     [_textView addSubview:_tipL];
-    
+    //添加图片按钮
     _addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _addBtn.frame = CGRectMake(15, CGRectGetMaxY(_textView.frame)+15, 70, 70);
     [_addBtn setImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
@@ -111,7 +113,7 @@
     _model.classname = _classname;
     _model.classId = @(_classId);
     _model.teacher_id = [[NSUserDefaults standardUserDefaults]objectForKey:@"teacher_id"];
-    
+    //记录保存时间
     NSDateFormatter *formatter2 = [[NSDateFormatter alloc] init];
     [formatter2 setDateStyle:NSDateFormatterMediumStyle];
     [formatter2 setTimeStyle:NSDateFormatterShortStyle];
@@ -119,7 +121,7 @@
     nowdateStr = [formatter2 stringFromDate:[NSDate date]];
     _model.nowdateStr = nowdateStr;
 }
-
+#pragma mark--UITextViewDelegate
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     if ([text isEqualToString:@"\n"]) {
@@ -162,6 +164,7 @@
     [menu showInView:[UIApplication sharedApplication].keyWindow];
     
 }
+#pragma mark--UIActionSheetDelegate
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {//相机

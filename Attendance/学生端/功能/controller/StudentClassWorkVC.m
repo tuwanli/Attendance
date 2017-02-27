@@ -71,6 +71,7 @@ static NSString *studentWorkCell_identifer = @"studentWorkCell_identifer";
         _tableView.allowsMultipleSelectionDuringEditing = YES;
     }
 }
+#pragma mark--UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return _dataArr.count;

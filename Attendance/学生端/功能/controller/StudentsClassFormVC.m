@@ -54,16 +54,17 @@ static NSString *StudentFormCell_identifer = @"StudentFormCell";
     NSArray *allArr = @[tempArr1,tempArr2,tempArr3,tempArr4,tempArr5];
     NSInteger userid =[[[NSUserDefaults standardUserDefaults]objectForKey:@"studen_id"]integerValue];
     NSArray *weekArr = @[@"星期一",@"星期二",@"星期三",@"星期四",@"星期五"];
-    [[StudentFormDB shareStudentForm]student_getFormData:tempArr1 studentId:userid weekId:1];
-    [[StudentFormDB shareStudentForm]student_getFormData:tempArr2 studentId:userid weekId:2];
-    [[StudentFormDB shareStudentForm]student_getFormData:tempArr3 studentId:userid weekId:3];
-    [[StudentFormDB shareStudentForm]student_getFormData:tempArr4 studentId:userid weekId:4];
-    [[StudentFormDB shareStudentForm]student_getFormData:tempArr5 studentId:userid weekId:5];
+    [[StudentFormDB shareStudentForm]student_getFormData:tempArr1 studentId:userid weekId:1];//周一
+    [[StudentFormDB shareStudentForm]student_getFormData:tempArr2 studentId:userid weekId:2];//周二
+    [[StudentFormDB shareStudentForm]student_getFormData:tempArr3 studentId:userid weekId:3];//周三
+    [[StudentFormDB shareStudentForm]student_getFormData:tempArr4 studentId:userid weekId:4];//周四
+    [[StudentFormDB shareStudentForm]student_getFormData:tempArr5 studentId:userid weekId:5];//周五
     for (int i=0; i<5; i++) {
         NSDictionary *tempDict = @{@"name":weekArr[i],@"class":allArr[i]};
         [_dataArr addObject:tempDict];
     }
 }
+#pragma mark--UICollectionViewDelegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
 

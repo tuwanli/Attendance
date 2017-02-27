@@ -25,10 +25,10 @@
 @interface LeaveModel : NSObject
 @property(nonatomic,unsafe_unretained)NSNumber *student_id;//id
 @property (nonatomic,unsafe_unretained)NSNumber *classId;//课程id
-@property (nonatomic, copy)NSString *classname;
-@property (nonatomic, copy)NSString *startTime;
-@property (nonatomic, copy)NSString *endTime;
-@property (nonatomic, copy)NSString *leaveStr;
-@property (nonatomic, copy)NSString *leaveState;
-@property (nonatomic, copy)NSString *createTime;
+@property (nonatomic, copy)NSString *classname;//课程名
+@property (nonatomic, copy)NSString *startTime;//开始时间
+@property (nonatomic, copy)NSString *endTime;//结束时间
+@property (nonatomic, copy)NSString *leaveStr;//请假理由
+@property (nonatomic, copy)NSString *leaveState;//请假状态
+@property (nonatomic, copy)NSString *createTime;//创建时间
 @end

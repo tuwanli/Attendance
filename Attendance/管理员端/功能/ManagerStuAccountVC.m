@@ -58,6 +58,7 @@ static NSString *ManagerAccount_identifer = @"ManagerAccount_identifer";
     UIBarButtonItem *rightItem             = [[UIBarButtonItem alloc]initWithCustomView:editButton];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
+#pragma mark--UITableViewDelegate/UItableViewDatasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
@@ -200,6 +201,7 @@ static NSString *ManagerAccount_identifer = @"ManagerAccount_identifer";
         [editButton setTitle:@"删除" forState:UIControlStateNormal];
     }
 }
+//移除moewView
 - (void)removeMoreView
 {
     

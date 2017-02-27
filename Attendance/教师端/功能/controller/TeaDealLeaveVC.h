@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TeaDealLeaveVC : UIViewController
-@property (nonatomic, assign)BOOL ismanager;
+@property (nonatomic, assign)BOOL ismanager;//是否为管理员
 @end

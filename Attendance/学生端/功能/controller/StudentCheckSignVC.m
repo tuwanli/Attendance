@@ -81,6 +81,7 @@ static NSString *StudentCheckCell_identifer = @"StudentCheckCell";
     
     
 }
+#pragma mark--UICollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return _dataArr.count;
@@ -202,6 +203,7 @@ static NSString *StudentCheckCell_identifer = @"StudentCheckCell";
         }
     }
 }
+//移除moreView
 - (void)removeMoreView
 {
     

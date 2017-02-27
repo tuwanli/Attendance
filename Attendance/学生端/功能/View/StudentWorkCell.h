@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StudentWorkCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *workContentL;
-@property (weak, nonatomic) IBOutlet UILabel *workTimeL;
+@property (weak, nonatomic) IBOutlet UILabel *workContentL;//作业
+@property (weak, nonatomic) IBOutlet UILabel *workTimeL;//时间
 
 @end

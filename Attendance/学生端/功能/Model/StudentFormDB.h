@@ -23,8 +23,8 @@
 @interface FormModel : NSObject
 @property(nonatomic,unsafe_unretained)NSNumber *student_id;//id
 @property (nonatomic,unsafe_unretained)NSNumber *classId;//课程id
-@property (nonatomic, copy)NSString *classname;
-@property (nonatomic, copy)NSString *startTime;
-@property (nonatomic,unsafe_unretained)NSNumber *weekDayId;
-@property (nonatomic, copy)NSString *teacherName;
+@property (nonatomic, copy)NSString *classname;//课程名
+@property (nonatomic, copy)NSString *startTime;//开始时间
+@property (nonatomic,unsafe_unretained)NSNumber *weekDayId;//星期id
+@property (nonatomic, copy)NSString *teacherName;//教师姓名
 @end

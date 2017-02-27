@@ -59,6 +59,7 @@ static NSString *studentSignCell_identifer = @"StudentSignCell";
     [self.view addSubview:_collectionView];
     
 }
+#pragma mark--UICollectionViewDelegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
 

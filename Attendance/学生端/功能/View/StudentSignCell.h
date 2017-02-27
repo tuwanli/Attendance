@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface StudentSignCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *classL;
+@property (weak, nonatomic) IBOutlet UILabel *classL;//课程名
 
 @end

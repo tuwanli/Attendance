@@ -23,7 +23,7 @@
 @interface CurriculumModel : NSObject
 @property(nonatomic,unsafe_unretained)NSNumber *student_id;//id
 @property (nonatomic,unsafe_unretained)NSNumber *CurriculumId;//课程id
-@property (nonatomic, copy)NSString *Curriculumname;
-@property (nonatomic, copy)NSString *classname;
+@property (nonatomic, copy)NSString *Curriculumname;//
+@property (nonatomic, copy)NSString *classname;//
 
 @end

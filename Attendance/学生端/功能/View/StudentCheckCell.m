@@ -15,7 +15,7 @@
     // Initialization code
     _classImageView.contentMode = UIViewContentModeScaleAspectFit;
 }
-
+//删除
 - (IBAction)deleteCellAction:(UIButton *)sender {
     if (_delegate&&[_delegate respondsToSelector:@selector(deleteCellWithRow:)]) {
         [_delegate deleteCellWithRow:sender.tag];

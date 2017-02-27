@@ -24,13 +24,13 @@
 
     // Configure the view for the selected state
 }
-
+//同意请假
 - (IBAction)agreeAction:(UIButton *)sender {
     if (_delegate&&[_delegate respondsToSelector:@selector(dealStuLeave:cellRwo:)]) {
         [_delegate dealStuLeave:1 cellRwo:sender.tag];
     }
 }
-
+//拒绝请假
 - (IBAction)refuseAction:(UIButton *)sender {
     if (_delegate&&[_delegate respondsToSelector:@selector(dealStuLeave:cellRwo:)]) {
         [_delegate dealStuLeave:2 cellRwo:sender.tag];

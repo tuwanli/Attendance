@@ -39,7 +39,7 @@
     NSDictionary *tempdict = _studentArr[indexPath.item];
     NSInteger fundId = [tempdict[@"id"]integerValue];
     switch (fundId) {
-        case 1://考勤
+        case 1://
         {
             StudentsClassFormVC *choosevc = [[StudentsClassFormVC alloc]init];
             choosevc.chooseIndex = 10;
@@ -53,7 +53,7 @@
             
         }
             break;
-        case 2:
+        case 2://课程表
         {
         
             StudentsClassFormVC *formVC = [[StudentsClassFormVC alloc]init];
@@ -61,7 +61,7 @@
             [self.navigationController pushViewController:formVC animated:YES];
         }
             break;
-        case 3:
+        case 3://考勤
         {
             StudentCheckSignVC *checkvc = [[StudentCheckSignVC alloc]init];
             checkvc.hidesBottomBarWhenPushed = YES;

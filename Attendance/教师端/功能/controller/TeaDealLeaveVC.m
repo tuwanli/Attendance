@@ -13,8 +13,8 @@ static NSString *TeaDealLeaveCell_idenfer = @"TeaDealLeaveCell_idenfer";
 @interface TeaDealLeaveVC ()<UITableViewDelegate,UITableViewDataSource,dealStuLeaveDelegate>
 {
 
-    BOOL isdelete;
-    UIButton *editButton;
+    BOOL isdelete;//是否删除
+    UIButton *editButton;//编辑
 }
 @property (nonatomic, strong)UITableView *tableView;
 @property (nonatomic, strong)NSMutableArray *dataArr;
@@ -55,6 +55,7 @@ static NSString *TeaDealLeaveCell_idenfer = @"TeaDealLeaveCell_idenfer";
         _tableView.allowsMultipleSelectionDuringEditing = YES;
     }
 }
+#pragma mark--UITableViewDelegate/UITabeViewDasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return _dataArr.count;
@@ -129,6 +130,7 @@ static NSString *TeaDealLeaveCell_idenfer = @"TeaDealLeaveCell_idenfer";
         }
     }
 }
+#pragma mark--dealStuLeaveDelegate处理请假
 - (void)dealStuLeave:(NSInteger)num cellRwo:(NSInteger)row
 {
     
@@ -138,7 +140,7 @@ static NSString *TeaDealLeaveCell_idenfer = @"TeaDealLeaveCell_idenfer";
     }else{
         wrongStr = @"已拒绝";
     }
-    for (TeaDealLeaveCell *cell in _tableView.visibleCells) {
+    for (TeaDealLeaveCell *cell in _tableView.visibleCells) {//修改状态
         if (row == cell.cellrow) {
             LeaveModel *model = _dataArr[row];
             
